@@ -7,4 +7,23 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Grpc.Tools" />
+    <None Remove="Google.Protobuf" />
+    <None Remove="Grpc.Net.ClientFactory" />
+    <None Remove="Protos\api.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Grpc.Tools" Version="2.23.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Google.Protobuf" Version="3.9.1" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.23.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="Protos\api.proto" GrpcServices="Client">
+      <SourceUri>https://github.com/BunHaed/Piskvorky</SourceUri>
+    </Protobuf>
+  </ItemGroup>
 </Project>
