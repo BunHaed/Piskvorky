@@ -18,6 +18,7 @@ internal class Program
         Console.ReadKey();
 
         //test na line 20 :).... FUCK YEAH BABY FUNGUJE TO!!!!!!!!!!
+        //:)
 
         while (true)
         {
