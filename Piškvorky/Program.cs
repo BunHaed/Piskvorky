@@ -8,6 +8,7 @@ internal class Program
     {
         char[] field = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
         int Player = 1;
+        bool gameRunning = true;
 
         Console.Clear();
         Console.WriteLine("Welcome to Piškovrky!");
@@ -20,7 +21,7 @@ internal class Program
         //test na line 20 :).... FUCK YEAH BABY FUNGUJE TO!!!!!!!!!!
         //:)
 
-        while (true)
+        while (gameRunning)
         {
             bool UsIn = true;
             Console.Clear();
@@ -68,8 +69,10 @@ internal class Program
                 }
                 else
                 {
-                    break;
+                    return;
                 }
+
+                WinnerCheck();
 
             }
 
@@ -88,10 +91,24 @@ internal class Program
             Console.WriteLine("     |     |      ");
         }
 
-
-
-
-
+        void WinnerCheck()
+        {
+            if (field[1] == field[2] && field[2] == field[3])
+            {
+                if(Player == 1)
+                {
+                    Player = 2;
+                }
+                else
+                { 
+                    Player = 1; 
+                }
+                Console.Clear();
+                Console.WriteLine("Player " + Player + "WINS!\nGAME OVER\nPress any key....");
+                Console.ReadKey();
+                Environment.Exit(0);
+            }
+        }
 
 
     }
