@@ -17,7 +17,7 @@ internal class Program
         Console.WriteLine("Press ENTER to start");
         Console.ReadKey();
 
-        //test na line 20 :).... uuuu asi to konečně funguje :DD
+        //test na line 20 :).... FUCK YEAH BABY FUNGUJE TO!!!!!!!!!!§
 
         while (true)
         {
